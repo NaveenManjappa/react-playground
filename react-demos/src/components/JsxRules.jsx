@@ -9,6 +9,8 @@ const JsxRules = () => {
         <li>JSX elements must be properly closed</li>
         <li>JSX attributes are written using camelCase like className,htmlFor etc</li>
       </ol>
+      <p>2 + 2 = { 2 + 2 }</p>
+      <p>Friend list: {['A','B','C']}</p>
     </div>
   )
 }
