@@ -3,6 +3,7 @@
 // import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 import './App.css';
+import ListGroupInJS from "./components/ListGroupInJS/ListGroupInJS";
 function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
   // const handleClose = () => setAlertVisibility(false);
@@ -18,7 +19,9 @@ function App() {
       <Button color="success" onClick={() => setAlertVisibility(true)}>
         My Button
       </Button> */}
-      <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem} />
+      {/* <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem} /> */}
+
+      <ListGroupInJS items={items} heading="Cities" onSelectItem={handleSelectItem} />
     </div>
   );
 }
