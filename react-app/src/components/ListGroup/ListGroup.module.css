@@ -1,0 +1,14 @@
+.list-group {
+  list-style: none;
+  padding: 0rem;
+}
+
+.list-group-item {
+display: block;
+padding: 1rem;
+border-bottom: 1px solid rgb(189, 176, 176,0.5);
+}
+
+.container {
+  background: red;
+}
