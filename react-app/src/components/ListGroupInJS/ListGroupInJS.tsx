@@ -26,7 +26,7 @@ function ListGroupInJS({ items, heading, onSelectItem }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
     <>
-      <h1>{heading}</h1>
+      <h1 style={{backgroundColor:'lightyellow'}}>{heading}</h1>
       {items.length === 0 && <p>No Items found!</p>}
       <List>
         {items.map((item, index) => (
