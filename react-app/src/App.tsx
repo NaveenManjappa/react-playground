@@ -5,6 +5,7 @@ import ButtonCss from "./components/ButtonCss/ButtonCss";
 import { BsCalendar2DayFill } from "react-icons/bs";
 import "./App.css";
 import ListGroupInJS from "./components/ListGroupInJS/ListGroupInJS";
+import Like from "./components/Like/Like";
 
 function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
@@ -31,6 +32,8 @@ function App() {
       <BsCalendar2DayFill color="blue" size="60" />
       <br />
       <ButtonCss />
+      <br />
+      <Like onClick={()=>console.log('Liked')}/>
     </div>
   );
 }
