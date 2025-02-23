@@ -10,6 +10,7 @@ import { useState } from "react";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import ExpandableText from "./components/ExpandableText";
+import Form from "./components/Form";
 
 function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
@@ -61,7 +62,7 @@ function App() {
       </Button> */}
       {/* <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem} /> */}
 
-      <ListGroupInJS
+      {/* <ListGroupInJS
         items={items}
         heading="Cities"
         onSelectItem={handleSelectItem}
@@ -82,6 +83,9 @@ function App() {
       <button onClick={updateCart}>Update quantity</button>
 
       <ExpandableText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate harum error quis aperiam quidem ea perspiciatis eaque aspernatur tenetur a sequi repudiandae corrupti dicta distinctio fugit, nihil fuga? Sed ipsa quisquam, voluptas laudantium quasi deserunt id nisi? Eius asperiores nostrum eligendi fugiat fuga voluptatem, recusandae odit itaque minus dolore repellendus distinctio eum tenetur illo perspiciatis earum modi ducimus magni. Error quia id, doloribus voluptatibus delectus non cupiditate excepturi odit beatae quas cumque libero ex fugit eaque animi ratione consequuntur veritatis illo! Animi fugit optio neque temporibus eum adipisci commodi quam et nulla, officia at perspiciatis reiciendis necessitatibus accusantium eius praesentium?</ExpandableText>
+    </div> */}
+    <Form />
+
     </div>
   );
 }
