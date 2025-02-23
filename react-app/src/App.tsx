@@ -9,6 +9,7 @@ import Like from "./components/Like/Like";
 import { useState } from "react";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
+import ExpandableText from "./components/ExpandableText";
 
 function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
@@ -79,6 +80,8 @@ function App() {
       <button onClick={addTopping}>Add Topping</button>
       <p>Cart items: {cart.items[0].quantity}</p>
       <button onClick={updateCart}>Update quantity</button>
+
+      <ExpandableText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate harum error quis aperiam quidem ea perspiciatis eaque aspernatur tenetur a sequi repudiandae corrupti dicta distinctio fugit, nihil fuga? Sed ipsa quisquam, voluptas laudantium quasi deserunt id nisi? Eius asperiores nostrum eligendi fugiat fuga voluptatem, recusandae odit itaque minus dolore repellendus distinctio eum tenetur illo perspiciatis earum modi ducimus magni. Error quia id, doloribus voluptatibus delectus non cupiditate excepturi odit beatae quas cumque libero ex fugit eaque animi ratione consequuntur veritatis illo! Animi fugit optio neque temporibus eum adipisci commodi quam et nulla, officia at perspiciatis reiciendis necessitatibus accusantium eius praesentium?</ExpandableText>
     </div>
   );
 }
