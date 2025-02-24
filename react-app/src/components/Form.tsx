@@ -1,4 +1,5 @@
-import React, { FormEvent, useRef } from "react";
+import React, { FormEvent, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
 
 interface Person {
   name:string | undefined;
@@ -8,6 +9,11 @@ const Form = () => {
   const nameRef = useRef<HTMLInputElement>(null);
   const ageRef = useRef<HTMLInputElement>(null);
   const person : Person = { name: "", age: 0 };
+
+  useState({
+    name:'',
+    age:0
+  })
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     person.name = nameRef.current?.value;
