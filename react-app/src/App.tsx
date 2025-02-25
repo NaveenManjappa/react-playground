@@ -13,6 +13,7 @@ import ExpandableText from "./components/ExpandableText";
 import Form from "./components/Form";
 import HookForm from "./components/HookForm";
 import ZodForm from "./components/ZodForm";
+import ExpenseTracker from "./components/ExpenseTracker";
 
 function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
@@ -89,9 +90,12 @@ function App() {
     <Form />
     <h2>Hook Form</h2>
     <HookForm />
-    */}
+    
     <h2>Zod plus Hook form</h2>
     <ZodForm />
+    */}
+
+    <ExpenseTracker />
 
 
     </div>
