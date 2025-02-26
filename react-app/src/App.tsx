@@ -14,6 +14,7 @@ import Form from "./components/Form";
 import HookForm from "./components/HookForm";
 import ZodForm from "./components/ZodForm";
 import ExpenseTracker from "./components/ExpenseTracker";
+import ExpenseList from "./expense-tracker/components/ExpenseList";
 
 function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
@@ -53,6 +54,15 @@ function App() {
       items:cart.items.map(item => item.id === 1 ? { ...item,quantity:item.quantity+1}:item)
     });
   }
+
+  const [expenses,setExpenses] =useState([
+    { id:1,description:'AAA',amount:10,category:'Utilities'},
+    { id:2,description:'BBB',amount:10,category:'Utilities'},
+    { id:3,description:'CCC',amount:10,category:'Utilities'},
+    { id:4,description:'DDD',amount:10,category:'Utilities'},
+  ]);
+
+  
   return (
     <div>
       {/* {alertVisible && (
@@ -93,10 +103,11 @@ function App() {
     
     <h2>Zod plus Hook form</h2>
     <ZodForm />
-    */}
+    
 
     <ExpenseTracker />
-
+*/}
+  <ExpenseList expenses={expenses} onDelete={(id) => setExpenses(expenses.filter(e => e.id !== id))}/>
 
     </div>
   );
