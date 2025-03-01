@@ -15,7 +15,7 @@ function App() {
       try {
         setIsLoading(true);
         await delay(5000);
-        const response = userService.getAllUsers();
+        const response = userService.getAll<User>();
         const res = await response.request;
         cancel = response.cancel;
         setUsers(res.data);
@@ -39,7 +39,7 @@ function App() {
   const deleteUser = (user: User) => {
     const originalUsers = [...users];
     setUsers(users.filter((u) => u.id != user.id));
-    userService.deleteUser(user.id).catch((error) => {
+    userService.delete(user.id).catch((error) => {
       setError(error.message);
       setUsers(originalUsers);
     });
@@ -49,7 +49,7 @@ function App() {
     const originalUsers = [...users];
     const newUser = { id: 0, name: "Abc" };
     setUsers([newUser, ...users]);
-      userService.addUser(newUser)
+      userService.create(newUser)
       .then(({ data: savedUser }) => setUsers([savedUser, ...users]))
       .catch((err) => {
         setError(err.message);
@@ -61,7 +61,7 @@ function App() {
     const originalUsers = [...users];
     const updatedUser = { ...user, name: user.name + "!" };
     setUsers(users.map((u) => (u.id === user.id ? updatedUser : u)));
-    userService.updateUser(updatedUser).catch((err) => {
+    userService.update(updatedUser).catch((err) => {
       setError(err.message);
       setUsers(originalUsers);
     });
