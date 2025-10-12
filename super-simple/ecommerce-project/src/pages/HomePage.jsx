@@ -1,9 +1,17 @@
+import axios from 'axios';
+import { useState,useEffect } from 'react';
 import { Header } from "../components/Header";
 import "./HomePage.css";
-import "../../starting-code/data/products";
-import { products } from "../../starting-code/data/products";
+
 
 function HomePage() {
+    const [products,setProducts]=useState([]);
+
+    useEffect(() => {
+      axios.get("http://localhost:3000/api/products").then((response) => {
+      setProducts(response.data);
+     });
+    },[]);
   return (
     <>
       <title>Ecommerce project</title>
@@ -69,4 +77,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default HomePage
