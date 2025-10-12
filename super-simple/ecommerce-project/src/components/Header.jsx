@@ -1,12 +1,12 @@
+import axios from "axios";
 import { Link } from "react-router";
 import "./Header.css";
 
 export function Header() {
-  fetch("http://localhost:3000/api/products").then((response) => {
-    return response.json()
-  }).then((data) => {
-      console.log(data);
-    });;
+  axios.get("http://localhost:3000/api/products")
+    .then((response) => {
+      console.log(response.data);
+    });    
 
   return (
     <div className="header">
