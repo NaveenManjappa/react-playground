@@ -1,7 +1,13 @@
-import { Link } from 'react-router'
-import './Header.css';
+import { Link } from "react-router";
+import "./Header.css";
 
 export function Header() {
+  fetch("http://localhost:3000/api/products").then((response) => {
+    return response.json()
+  }).then((data) => {
+      console.log(data);
+    });;
+
   return (
     <div className="header">
       <div className="left-section">
