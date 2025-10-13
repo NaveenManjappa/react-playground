@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState, Fragment } from "react";
-import { Header } from "../components/Header";
+import { Header } from "../../components/Header";
 import "./OrdersPage.css";
 import dayjs from "dayjs";
-import { formatMoney } from "../utils/money";
+import { formatMoney } from "../../utils/money";
 
 export function OrdersPage({ cart }) {
   const [orders, setOrders] = useState([]);
@@ -56,9 +56,14 @@ export function OrdersPage({ cart }) {
                             {orderProduct.product.name}
                           </div>
                           <div className="product-delivery-date">
-                            Arriving on: {dayjs(orderProduct.estimatedDeliveryTimeMs).format('MMMM D')}
+                            Arriving on:{" "}
+                            {dayjs(orderProduct.estimatedDeliveryTimeMs).format(
+                              "MMMM D"
+                            )}
                           </div>
-                          <div className="product-quantity">Quantity: {orderProduct.quantity}</div>
+                          <div className="product-quantity">
+                            Quantity: {orderProduct.quantity}
+                          </div>
                           <button className="buy-again-button button-primary">
                             <img
                               className="buy-again-icon"
