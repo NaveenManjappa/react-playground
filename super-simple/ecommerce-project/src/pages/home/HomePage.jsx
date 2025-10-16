@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import "./HomePage.css";
 import { ProductsGrid } from "./ProductsGrid";
 
-function HomePage({ cart,loadCart }) {
+export function HomePage({ cart,loadCart }) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const getHomeData = async () => {
@@ -25,4 +25,4 @@ function HomePage({ cart,loadCart }) {
   );
 }
 
-export default HomePage;
+
