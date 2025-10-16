@@ -1,16 +1,17 @@
 import { Link } from "react-router";
 import "./Header.css";
 
-type HeaderProps = { cart:[
-  {
-    productId:string;
-    quantity:number;
-    deliveryOptionId:string;
-  }
-] }
+type HeaderProps = {
+  cart: [
+    {
+      productId: string;
+      quantity: number;
+      deliveryOptionId: string;
+    }
+  ];
+};
 
-export function Header({ cart }:HeaderProps) {
-  
+export function Header({ cart }: HeaderProps) {
   let totalQuantity = 0;
   cart.forEach((cartItem) => {
     totalQuantity += cartItem.quantity;
@@ -34,6 +35,8 @@ export function Header({ cart }:HeaderProps) {
       </div>
 
       <div className="right-section">
+        
+
         <Link className="orders-link header-link" to="/orders">
           <span className="orders-text">Orders</span>
         </Link>
